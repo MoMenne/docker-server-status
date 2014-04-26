@@ -1,0 +1,29 @@
+<html ng-app="app" ng-controller="StatiiCtrl">
+
+<head>
+    <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.css" media="screen"/>
+    <link rel="stylesheet" href="app.css" media="screen"/>
+</head>
+
+<body>
+
+    <h1>Docker Server Status</h1>
+
+    <div class="panel panel-default {{running && 'green' || ''}}">
+
+        <span class="glyphicon {{running && 'glyphicon-ok' || 'glyphicon-off'}}"></span> Application Server
+    </div>
+    <div class="panel panel-default">
+
+        <span class="glyphicon glyphicon-refresh"></span> Identity Server
+    </div>
+    <div class="panel panel-default">
+
+        <span class="glyphicon glyphicon-off"></span> Storage Service
+    </div>
+
+    <script type="text/javascript" src="http://localhost:8003/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="lib/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
